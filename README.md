@@ -26,4 +26,9 @@ Remember to save the settings for them to take effect! It is also best to stop t
 reloading the page might be necessary.
 
 ## Bugs?
-Oh there will be bugs. If you find a bug feel free to open an issue detailing it and if you have a fix ready to go, feel free to open a pull request.
+Oh there will be bugs. If you find a bug feel free to open an issue detailing it and if you have a fix ready to go, feel free to open a pull request. 
+Beware, the code is messy.
+
+## Features?
+While I can't guarantee that I will be continuing developing this much further, you never know! Open a feature request with what you wish to see and 
+I'll try to get to it! Alternatively, you can just code the feature and submit a pull request, or open a pull request on any open feature requests.

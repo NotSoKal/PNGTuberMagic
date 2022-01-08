@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PNGTuber Magic</title>
+</head>
+<body class="dark">
+    <div class="container">
+        <div class="main">
+            <h1>PNGTuber Magic</h1>
+            <p id="mic-status">Getting microphone...</p>
+            
+            <div id="character-area" class="character-area">
+                <img id="character" class="character" src="" />
+                <img id="character-open" class="character" src="" style="display: none;" />
+            </div>
+        </div>
+            
+        <div class="settings-container">
+            <label for="setting-char-mouth-closed">Location of character's closed mouth sprite</label>
+            <input id="setting-char-mouth-closed" type="text" />
+
+            <label for="setting-char-mouth-open">Location of character's open mouth sprite</label>
+            <input id="setting-char-mouth-open" type="text" />
+
+            <label for="setting-background-color">Background color</label>
+            <select id="setting-background-color">
+                <option value="#00FF00">Green</option>
+                <option value="#0000FF">Blue</option>
+            </select>
+
+            <label for="setting-voice-threshold">
+                Speech threshold
+                <details title="">...or how loud a sound has to be to be identified as speech</details>
+                <span id="threshold-value"></span>
+            </label>
+            <input id="setting-voice-threshold" type="range" step="1" min="0" max="50" />
+
+            <label for="setting-volume-interval">
+                Volume check interval
+                <details title="">...or how many milliseconds does the app wait until it attempts to check your microphone's volume. Smaller number is smoother but also more processor intensive.</details>
+                <span id="interval-value"></span>
+            </label>
+            <input id="setting-volume-interval" type="range" step="1" min="10" max="1000" />
+
+            <label for="setting-dark-mode">Dark mode</label>
+            <input id="setting-dark-mode" type="checkbox" checked />
+
+            <button id="save-settings" class="btn" type="button">Save</button>
+
+            <div class="controls">
+                <button id="start-movement" class="btn btn-start" type="button">Start</button>
+                <button id="stop-movement" class="btn btn-stop" type="button">Stop</button>
+            </div>
+
+            <p id="app-status">Stopped</p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+p {
+    margin-bottom: 0.5rem;
+}
+
+.character-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    min-width: 40rem;
+    min-height: 40rem;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    width: 40rem;
+}
+
+.settings-container > input, .settings-container > select {
+    width: 80%;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: solid 1px gray;
+    height: 2rem;
+}
+
+.settings-container > label {
+    width: 80%;
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    margin: 2rem;
+    background: #8ca1ff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #5151b3;
+    cursor: pointer;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-start {
+    background: #329432;
+    color: white;
+}
+
+.btn-start:hover {
+    background: #2d6b2d;
+}
+
+.btn-stop {
+    background: #d64a4a;
+    color: white;
+}
+
+.btn-stop:hover {
+    background: #702626;
+}
+
+html .dark {
+    background: #141418;
+    color: #fdfdfd;
+}

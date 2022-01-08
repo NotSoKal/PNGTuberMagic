@@ -62,7 +62,7 @@ const readSettings = () => {
     character.setAttribute('src', charMouthClosed);
     characterOpen.setAttribute('src', charMouthOpen);
     characterArea.setAttribute('style', `background: ${settings.backgroundColor}`);
-}
+};
 
 settingVoiceThreshold.addEventListener('change', e => {
     thresholdValue.textContent = e.target.value;
@@ -89,12 +89,12 @@ saveBtn.addEventListener('click', e => {
 readSettings();
 
 const getAverageVolume = bytes => {
-    var values = 0;
-    var average;
+    let values = 0;
+    let average;
 
-    var length = bytes.length;
+    let length = bytes.length;
 
-    for (var i = 0; i < length; i++) {
+    for (let i = 0; i < length; i++) {
         values += bytes[i];
     }
 
@@ -136,7 +136,7 @@ navigator.mediaDevices.getUserMedia({ audio: true, video: false })
 .catch(err => {
     micStatusText.textContent = "Failed to capture microphone audio :/ Make sure to give permission for this site to use the microphone!";
     micStatusText.style.color = 'red';
-    console.error(err)
+    console.error(err);
 });
 
 start.addEventListener("click", () => {

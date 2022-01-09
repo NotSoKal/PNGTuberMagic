@@ -7,8 +7,7 @@
 
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -18,7 +17,20 @@ h1 {
 }
 
 p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .character-area {
@@ -27,8 +39,26 @@ p {
     justify-content: center;
     align-items: center;
     padding: 4rem;
-    min-width: 40rem;
-    min-height: 40rem;
+    width: 40rem;
+    height: 40rem;
+    width: 60%;
+}
+
+.hidden {
+    display: none;
+}
+
+.bounce {
+    position: relative;
+    animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+    0% { bottom: 0rem; }
+    25%, 50% { bottom: 1.5rem; }
+    75% { bottom: 0rem; }
+    90% { bottom: 0.4rem; }
+    100% { bottom: 0rem; }
 }
 
 .settings-container {
@@ -36,12 +66,12 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
-    width: 40rem;
+    margin: 2rem;
+    width: 40%;
 }
 
 .settings-container > input, .settings-container > select {
-    width: 80%;
+    width: 100%;
     margin-bottom: 1rem;
     border-radius: 0.5rem;
     border: solid 1px gray;
@@ -49,21 +79,34 @@ p {
 }
 
 .settings-container > label {
-    width: 80%;
+    width: 100%;
     margin-bottom: 0.5rem;
 }
 
+.settings-checkbox-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.settings-checkbox {
+    margin-left: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
 .btn {
-    margin: 2rem;
-    background: #8ca1ff;
-    padding: 1rem 2rem;
+    margin: 1rem;
+    background: #5e78eb;
+    color: white;
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: 2rem;
     font-weight: 600;
 }
 
 .btn:hover {
-    background: #5151b3;
+    background: #4343b8;
     cursor: pointer;
 }
 
@@ -74,7 +117,6 @@ p {
 
 .btn-start {
     background: #329432;
-    color: white;
 }
 
 .btn-start:hover {
@@ -83,7 +125,6 @@ p {
 
 .btn-stop {
     background: #d64a4a;
-    color: white;
 }
 
 .btn-stop:hover {
